@@ -1,0 +1,38 @@
+{% extends 'navbar.html' %}
+{% load static %}
+
+{% block body %}
+{% if request.user == user %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/delete.css' %}">
+    <title>{{ questions.title }} - Delete | Spacerds</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="items">
+
+            <h1>Are you sure you want to delete your question?</h1>
+            <h2>Question: <small>{{ questions.title }}</small></h2>
+            <h3>Question Id: <small>{{ questions.id }}</small></h3>
+            <h4>Asked By: <small>{{ questions.author }}</small></h4>
+            <form method="POST">
+                {% csrf_token %}
+
+                {{ form }}
+
+                <button class="btn" type="submit">Yes, I'm Sure</button>
+        </div>
+        </form>
+    </div>
+
+</body>
+{% endif %}
+{% endblock body %}
+</html>

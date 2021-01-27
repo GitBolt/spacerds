@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-align: center;
+}
+
+.mainbg{
+    max-width: 100%;
+    height: 700px;
+    position: relative;
+    z-index: 1;
+}
+h1 {
+    position: relative;
+    bottom: 100px;
+    background-image: url(/static/bgs/pbg.png);
+    background-size: 100%;
+    background-position: center center fixed;
+    background-attachment:fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 350px 0;
+    text-align: center;
+    z-index: 2;
+    font-size: 70px;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    word-spacing: 5px;
+}
+p {
+    position: relative;
+    bottom: 280px;
+    text-align: center;
+    z-index: 3;
+    font-size: 45px;
+    color: white;
+    font-family: 'Electrolize', sans-serif;
+    word-spacing: 4px;
+}
+
+h2{
+    color: #0b004b;
+    font-size: 80px;
+    font-family: 'Ubuntu', sans-serif;
+    transition: .3s ;
+}
+h2:hover{
+    color: rgb(4, 142, 255);
+    font-size: 85px;
+    text-shadow: 0px 2px 3px #000000;
+    
+}
+.qex{
+    color: black;
+    top: 100px;
+    font-size: 50px;
+    transition: .4s;
+   
+}
+.ask{
+    font-size:40px;
+    position: relative;
+    top: 170px;
+    color: white;
+    background-color: #0b004b;
+    padding: 12px 80px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 5px;
+    transition: .2s;
+}
+.ask:hover{
+    background-color: white;
+    border: 2px solid #0b004b;
+    color: #0b004b;
+}
+.ez{
+    position: relative;
+    top: 280px;
+    padding-top: 30px;    
+    background-color: black;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 80px;
+    height: 400px;
+
+}
+.ezex{
+    position: relative;
+    top: 50px;
+    color: white;
+    background-color: black;
+    width: 100%;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 40px;
+}
+.knowledge{
+    top: 400px;
+    position: relative;
+}
+.know{
+    position: relative;
+    top: 500px;
+    color: black;
+}
+.blogs{
+    font-size: 40px;
+    position: relative;
+    top: 580px;
+    color: white;
+    background-color: #0b004b;
+    padding: 12px 80px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 5px;
+    transition: .2s;
+}
+.blogs:hover{
+    cursor: pointer;
+    background-color: white;
+    border: 3px solid #0b004b;
+    color: #0b004b;
+}
+.halp{
+    position: relative;
+    top: 700px;
+    padding-top: 30px;   
+    background-color: black;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 80px;
+    height: 400px;
+}
+.halpex{
+    position: relative;
+    top: 500px;
+    color: white;
+    text-align: center;
+    background-color: black;
+    width: 100%;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 40px;
+       
+}
+.here{
+    color: rgb(0, 255, 0);
+}
+@media screen and (max-width: 1047px){
+
+
+h1{
+    font-size: 50px;
+}
+p{
+    bottom: 350px;
+    font-size: 30px;
+}
+.ask{
+    font-size: 30px;
+}
+.blogs{
+    font-size: 30px;
+
+}
+h2{
+    font-size: 70px;
+}
+.qex{
+    font-size: 40px;
+}
+.know{
+    font-size: 40px;
+}
+.ez{
+    font-size: 70px;
+}
+.ezex{
+    font-size: 30px;
+}
+.halp{
+    font-size: 70px;
+}
+.halpex{
+    font-size: 30px;
+    padding: 0px 30px;
+    padding-bottom: 30px;
+}
+}
+@media screen and (max-width: 760px){
+    h1{
+        position: relative;
+        bottom: 220px;
+        padding: 400px 0;
+    }
+    p{
+        bottom: 490px;
+        
+    }
+    h2{
+        position: relative;
+        bottom: 200px;
+    }
+    .qex{
+        top: -100px;  
+    }
+    .ask{
+        top: -40px;
+    }
+.ez{
+    top: 150px;
+}
+}
+@media screen and (max-width: 650px){
+    h1{
+        font-size: 50px;
+    }
+    p{
+        font-size: 30px;
+    }
+    .ask{
+        font-size: 20px;
+    }
+    .blogs{
+        font-size: 20px;
+    
+    }
+    h2{
+        font-size: 70px;
+    }
+    .qex{
+        font-size: 35px;
+    }
+    .know{
+        font-size: 35px;
+    }
+    .ez{
+        font-size: 60px;
+    }
+    .ezex{
+        font-size: 28px;
+    }
+    .halp{
+        font-size: 60px;
+    }
+    h3{
+        font-size: 60px
+    }
+       
+}
+@media screen and (max-width: 640px){
+    h2{
+        font-size: calc(3vw + 40px);
+    }
+    .blogs{
+        padding: calc(2vw + 2px) calc(5vw + 10px);
+        font-size: calc(2vw + 15px);
+    }
+    .ask{
+        padding: calc(2vw + 2px) calc(5vw + 20px);
+        font-size: calc(2vw + 15px);
+    }
+}

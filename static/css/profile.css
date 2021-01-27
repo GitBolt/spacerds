@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-image: url(/static/bgs/pbg.png);
+    background-size: 100%;
+    background-attachment:fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+html, body{
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.items{
+    background-color: rgba(0, 0, 0, 0.815);
+    border-radius: 10px;
+    width: 1000px;
+    margin-top: 80px;
+}
+.pfp{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 2px solid rgb(0, 247, 255);
+    margin: 10px;
+}
+.user{
+    color: white;
+    font-size: 40px;
+    font-family: 'Roboto';
+    position: relative;
+    bottom: 100px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1{
+    font-family: 'Varela Round';
+    color: white;
+    font-size: 35px;    
+    margin: 10px;
+}
+h2{
+    font-family: 'Varela Round';
+    color: white;
+    font-size: 35px;
+}
+h3{
+    font-family: 'Varela Round';
+    color: white;
+    font-size: 35px;
+    margin: 10px;
+}
+.btn{
+    margin: 20px;
+    padding: 10px 20px;
+    font-size: 20px;
+    background: #ffff0161;
+    font-family: 'Varela Round';
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    transition: .3s;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: rgba(0, 255, 234, 0.219);
+}
+#id_image{
+    position: relative;
+    margin-right: 80%;
+    bottom: 130px;
+    width: 120px;
+    border-radius: 5px;
+    padding: 3px 3px;
+    font-size: 7px;
+    color: #d6fffd;
+    background: #000000ad;
+}
+#id_image:hover{
+    cursor: pointer;
+    background-color: black;
+}
+#id_username{
+    width: 40%;
+    font-size: 17px;
+    font-family: 'Varela Round';
+    border: 2px solid #016fff;
+    padding: 2px 4px;
+    border-radius: 4px;
+    outline: none;
+    transition: 0.3s;
+}
+#id_username:focus{
+    border: 2px solid rgb(255, 115, 0);
+    width: 42%;
+}
+#id_email{
+    width: 40%;
+    font-size: 17px;
+    font-family: 'Varela Round';
+    border: 2px solid #016fff;
+    padding: 2px 4px;
+    border-radius: 4px;
+    outline: none;
+    transition: .3s;
+}
+#id_email:focus{
+    border: 2px solid rgb(255, 123, 0);
+    width: 42%;
+}
+#id_bio{
+    width: 40%;
+    font-size: 17px;
+    font-family: 'Varela Round';
+    border: 2px solid #016fff;
+    padding: 2px 4px;
+    border-radius: 4px;
+    outline: none;
+    transition: .3s;
+}
+#id_bio:focus{
+    border: 2px solid rgb(255, 115, 0);
+    width: 42%;
+}
+/*not logged profile (viewing others)*/
+small{
+    color: #808080;
+    border: 2px solid #00ffc4;
+    width: 400px;
+    padding: 5px 8px;
+    font-size: 20px;
+    font-family: 'Varela Round';
+    margin: 25px;
+}
+
+
+@media screen and (max-width: 1047px){
+    .items{
+        width: 90vw;
+    }
+    .pfp{
+        width: calc(14vw + 70px);
+        height: calc(14vw + 70px);
+    }
+    #id_image{    
+    margin-right: calc(72vw - 75px);
+    bottom: calc(8vw + 60px);
+    width: calc(7vw + 70px);
+    height: calc(1vw + 11px);
+    font-size: calc(0.2vw + 5px);
+    }
+    .user{
+        bottom: calc(8vw + 30px);
+        font-size: calc(3vw + 7px);
+        word-break: break-all;
+    }
+    h1{
+        font-size: calc(3vw + 4px);
+    }
+    h2{
+        font-size: calc(3vw + 4px);
+    }
+    h3{
+        font-size: calc(3vw + 4px);
+    }
+    #id_username{
+        width: calc(24vw + 100px);
+        height: calc(2vw + 10px);        
+        font-size: calc(1vw + 6px);
+    }
+    #id_username:focus{
+        width: calc(24vw + 110px);
+    }
+    #id_email{
+        width: calc(24vw + 100px);
+        height: calc(2vw + 10px);       
+        font-size: calc(1vw + 6px);
+    }
+    #id_email:focus{
+        width: calc(24vw + 110px);
+    }
+    #id_bio{
+        width: calc(24vw + 100px);
+        height: calc(10vw + 100px);
+        font-size: calc(1vw + 6px);
+
+    }
+    #id_bio:focus{
+        width: calc(24vw + 110px);
+    }
+    .btn{
+        font-size: calc(2vw + 4px );
+        padding: calc(1vw + 2px) calc(1vw + 11px);
+    }
+    small{
+        width: calc(25vw + 100px);
+        padding: calc(.8vw + 1px);   
+        font-size: calc(1vw + 6px);
+    }
+}

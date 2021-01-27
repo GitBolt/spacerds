@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+body{
+    background-image: url(/static/bgs/ask.png);
+    background-size: 100%;
+    background-attachment:fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.everything{
+    align-items: center;
+    position: relative;
+    top: 72px;
+    display: flex;
+    flex-direction: column;
+}
+.q{
+    width: 900px;
+    background-color: #000002d9;
+    border-radius: 10px;
+    padding: 15px 30px;
+}
+.ans{
+    width: 900px;
+    background-color: #000002d9;
+    border-radius: 10px;
+
+}
+
+
+.imageq{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: relative;
+    margin: 20px;
+}
+.userq{
+    font-family: 'Electrolize', sans-serif;
+    color: #03C3FF;
+    position: relative;
+    bottom: 42px;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+.titleq{
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    color: rgb(255, 255, 255);
+    margin-top: -30px;
+    font-size: 30px;
+    margin-left: 20px;
+    bottom: -30px;
+    margin-right: 20px;
+    position: relative;
+    word-break: break-word;
+}
+.dateq{
+    float: right;
+    font-family: 'Roboto';
+    color: #03C3FF;
+    font-size: 15px;
+    position: relative;
+    margin: 20px;
+}
+.mainq{
+    color: #949494;
+    font-size: 20px;
+    font-family: 'Electrolize', sans-serif;
+    overflow: hidden;
+    word-break: break-all;
+    margin: 10px ;
+    position: relative;
+    top: 20px;
+}
+.maina{
+    color: #ffffff;
+    font-size: 18px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    position: relative;
+    right: -30px;
+    overflow: hidden;
+    word-break: break-word;
+    text-overflow: ellipsis;
+    margin-bottom: 25px;
+}
+
+.info{
+    text-align: center;
+    color: white;
+    font-family: 'Roboto';
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+
+
+
+.anstitle{
+    color: #0AF0FF;
+    text-align: left;
+    margin: 11px 19px;
+    margin-bottom: 80px;
+    font-size: 32px;
+    font-family: 'Electrolize', sans-serif;
+}
+.datea{
+    font-size: 12px;
+    float: left;
+    margin-top: -60PX;
+    color: #03C3FF;
+    font-family: 'Roboto';
+
+}
+.imagea{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    float: right;
+    margin: 10px;
+    position: relative;
+    bottom: 60px;
+}
+.usera{
+    float: right;
+    font-size: 15px;
+    position: relative;
+    font-family: 'Roboto';
+    color: #02a2d5;
+    bottom: 40px;
+}
+
+.ansa{
+    font-family: 'Roboto';
+    font-size: 15px;
+    color: #00C2FF;
+    position: relative;
+    bottom: 29px;
+    padding: 10px 25px;
+    border: 1px solid #00C2FF;
+    transition: .2s;
+    border-radius: 8px;
+    margin-left: 38%;
+}
+.ansa:hover{
+    padding: 11px 26px;
+    background-color: rgba(17, 0, 90, 0.397);
+    color: white;
+}
+.ansbtn{
+    color: #00C2FF;
+    position: relative;
+    bottom: 10px;
+}
+.update{
+    color: #fefffe;
+    padding: 7px 11px;
+    font-family: 'Roboto';
+    background: #000921;
+    margin: 15px;
+    position: relative;
+    float: right;
+    border-radius: 6px;
+    transition: .3s;
+}
+
+.delete{
+    color: #ffffff;
+    padding: 7px 11px;
+    font-family: 'Roboto';
+    background: #000921;
+    margin: 15px;
+    position: relative;
+    float: right;
+    border-radius: 6px;
+    transition: .3s;
+}
+.update:hover{
+    background-color: rgb(0, 56, 0);
+}
+.delete:hover{
+    background-color: rgb(63, 0, 0);
+}
+div#answer a.deletee{
+    color: #ff4b42;
+    float: right;
+    position: relative;
+    top: -18px;
+    font-family: 'Roboto';
+}
+hr{
+    margin: 2px;
+}
+@media screen and (max-width: 1050px){
+    .q{
+        width: 90%;
+    }
+    .ans{
+        width: 90%;
+    }
+    .titleq{
+        font-size: 3.5vw;
+    }
+    .maina{
+        font-size: 2.5vw;
+    }
+    .mainq{
+        font-size: 2.5vw;
+    }
+    .ansa{
+        font-size: 15px;
+        padding: 10px 20px ;
+    }
+}
+@media screen and (max-width: 650px){
+
+    .titleq{
+        font-size: 22px;
+        margin-top: -10px;
+    }
+    .maina{
+        font-size: 25px;
+    }
+    .mainq{
+        font-size: 15px;
+    }
+    .userq{
+        font-size: 3vw;
+        position: relative;
+        top: -40px;
+    
+    }
+    .imageq{
+        width: calc(3vw + 33px);
+        height: calc(3vw + 33px);
+        margin-right: 0px;
+    }
+    .dateq{
+        font-size: 2vw;
+    }
+    .maina{
+        font-size: 15px;
+    }
+    .anstitle{
+        font-size: 20px;
+        margin-bottom: 100px;
+    }
+    .datea{
+        margin-top: -30px;
+    }
+    .delete{
+        padding: 1vw 2vw;
+        font-size: 15px;
+        top: 20px;
+    }
+    .update{
+        padding: 1vw 2vw;
+        font-size: 15px;
+        top: 20px;
+    }
+}

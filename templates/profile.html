@@ -1,0 +1,74 @@
+{% extends 'navbar.html' %}
+{% load static %}
+
+{% block body %}
+{% if request.user == user %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block style %}
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+    {% endblock style %}
+    <title>Profile - {{user.username}} | Spacerds</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="items">
+            <img class="pfp" src="{{ user.profile.image.url }}">
+            <strong class="user">{{ user.username }}</strong>
+            <form class="form" method="POST" enctype='multipart/form-data'>
+
+                {% csrf_token %}
+                {{ p_form.image }}
+
+                <h1>Username</h1> {{ u_form.username }}
+
+                <h2>Email</h2> {{ u_form.email }}
+
+                <h3>Bio</h3> {{ p_form.bio }}
+                
+                <button class="btn" type="submit">Update</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+{% else %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - {{ user.username }} | Spacerds</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="items">
+            <img class="pfp" src="{{ user.profile.image.url }}">
+            <strong class="user">{{ user.username }}</strong>
+            <form class="form" method="POST" enctype='multipart/form-data'>
+
+                <h1>Username</h1><small>{{ user.username}}</small>
+
+                <h2>Email</h2><small>{{ user.email}}</small>
+
+                <h3>Bio</h3><small>{{user.profile.bio }}</small>
+                
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
+{% endif %}
+{% endblock body %}
+
+</html>

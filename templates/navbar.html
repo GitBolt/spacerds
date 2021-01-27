@@ -1,0 +1,88 @@
+{% load static %}
+
+{% if user.is_authenticated %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   {% block style %}
+   {% endblock style %}
+   <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+</head>
+
+<body>
+
+   <nav class="navbar">
+      <div class="hamburger">
+         <div class="line"></div>
+         <div class="line"></div>
+         <div class="line"></div>
+      </div>
+      <div class="max-width">
+         <div class="logo"><a>Space<span>rds</span></a></div>
+         <a class="bell" href="{% url 'notis' %}"><img class="imageb"src="/static/bgs/bell.png" alt="">
+            {% if count_notis %}
+            <span class="count">{{ count_notis }}</span>
+            {% endif %}
+         </a>
+         <ul class="menu" id="forjs">
+            <li><a href="/">Home</a></li>
+            <li><a href="{% url 'qhome' %}">Questions</a></li>
+            <li><a href="{% url 'bhome' %}">Blogs</a></li>
+            <li><a href="{% url 'profile' request.user.username %}">Profile</a></li>
+            <li><a class="log" href="{% url 'logoutuser' %}">Logout</a></li>
+         </ul>
+      </div>
+   </nav>
+
+
+   <script src="/static/js/navbar.js"></script>
+</body>
+{% block body %}
+{% endblock body %}
+
+</html>
+
+
+{% else %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   {% block style2 %}
+   {% endblock style2 %}
+   <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+</head>
+
+<body>
+
+   <nav class="navbar">
+      <div class="hamburger">
+         <div class="line"></div>
+         <div class="line"></div>
+         <div class="line"></div>
+      </div>
+      <div class="max-width">
+         <div class="logo"><a>Space<span>rds</span></a></div>
+         <ul class="menu">
+            <li><a href="/">Home</a></li>
+            <li><a href="{% url 'qhome' %}">Questions</a></li>
+            <li><a href="{% url 'bhome'%}">Blogs</a></li>
+            <li><a href="{% url 'loginuser' %}">Login</a></li>
+            <li><a href="{% url 'signupuser' %}">SignUp</a></li>
+         </ul>
+      </div>
+   </nav>
+
+
+   <script src="/static/js/navbar.js"></script>
+</body>
+{% block body2 %}
+{% endblock body2 %}
+
+</html>
+{% endif %}

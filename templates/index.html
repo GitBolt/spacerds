@@ -1,0 +1,57 @@
+{% extends 'navbar.html' %}
+{% load static %}
+
+{% block body2 %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block style2 %}
+    {% block style %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    {% endblock style %}
+    {% endblock style2 %}
+    <title>Home | Spacerds</title>
+</head>
+
+<body>
+
+    <section class="home" id="home">
+        <div class="max-widthh">
+            <div class="home-content">
+                <h1>For The People Who Love Space</h1>
+                <p>The Platform Made To Share And Gain Knowlege About Space</p>
+            </div>
+        </div>
+    </section>
+
+    <h2>Questions</h2>
+    <p class="qex">Spacerds is a <br>community for anyone <br>who likes space.We will <br>help you get answers
+        <br>related to all <br>space/rocket science questions.
+    </p></br>
+    <a class="ask" href="{% url 'qhome' %}"><span>Ask or Answer</span></a>
+    <section class="ez" id="ez">
+        <h3>Easy To Use</h3>
+        <p class="ezex">We don’t want users to have hard time<br>understanding what’s going on and what to do<br>here.
+            That’s why we have designed the website<br>for easy to use user interface</p>
+    </section>
+    <h2 class="knowledge">Knowlege</h2>
+    <p class="know">We want to provide<br>information and<br>knowldge about space and<br>Rocket science<br> through our
+        Blogs</p>
+    <a class="blogs" href="{% url 'bhome' %}"><span>Start Reading</span></a>
+    </section>
+    <h3 class="halp">Help Us Improve</h3>
+    <p class="halpex">We want users to have the best experience, if there is<br>something which you think can improved
+        or anything new<br>which you would like to see can be suggested <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdhvZ3w_wRNFxb5JiOyiHn4RgxuyacLTvLUm4S9rgQKvn-KYA/viewform"
+            class="here">here</a></p>
+
+
+</body>
+
+</html>
+{% endblock body %}
+{% endblock body2 %}

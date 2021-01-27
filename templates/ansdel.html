@@ -1,0 +1,36 @@
+{% extends 'navbar.html' %}
+{% load static %}
+
+{% block body %}
+{% if request.user == user %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/delete.css' %}">
+    <title>{{ answers.body }} - Delete</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="items">
+            <h1>Are you sure you want to delete your answer?</h1>
+            <h2>Answer: <small class="mess">{{ answer.body |striptags }}</small></h2>
+            <h3>Answer Id: <small>{{ answer.id }}</small></h3>
+            <h4>Answer by: <small>{{ answer.owner }}</small></h4>
+            <form method="POST">
+                {% csrf_token %}
+
+                {{ form }}
+
+                <button class="btn" type="submit">Delete</button>
+        </div>
+        </form>
+    </div>
+</body>
+
+</html>
+{% endif %}
+{% endblock body %}

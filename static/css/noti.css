@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+
+body{
+    background: url(/static/bgs/nbg.png);
+    background-size: 100%;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.stuff{
+    cursor: pointer;
+    background: #000000d1;
+    width: calc(80vw  - 0px);
+    height: 200px;
+    border: 1px solid rgb(34, 34, 34);
+    margin: 10px;
+    border-radius: 5px;
+    transition: .2s;
+}
+.stuff:hover{
+    border: 1px solid rgb(139, 139, 139);
+}
+.date{
+    float: right;
+    font-size: 12px;
+    color: #8a8a8a;
+    font-family: 'Varela Round';
+    margin-right: 8px;
+    margin: 10px;
+}
+.myq{
+    text-align: center;
+    font-family: 'Varela Round';
+    margin-bottom: 10px;
+    margin: 15px 55px;
+    color: white;
+    font-size: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.pfp{
+    border-radius: 50%;
+    width: 32px;
+    float: left;
+    margin: 10px;
+    height: 32px;
+}
+.ans{
+    font-size: 15px;
+    text-align: center;
+    color: #a5efff;
+    font-family: 'Varela Round';
+    margin: 32px;
+    position: relative;
+    bottom: 25px;
+}
+.he{
+    margin-top: 120px;
+}
+.title{
+    font-family: 'Varela Round';
+    font-size: 15px;
+    color: rgb(255 255 255);
+    margin: 8px;
+    position: relative;
+    padding: 3px 8px;
+    background: #57ff004a;
+    top: 11px;
+}
+.user{
+    font-size: 15px;
+    font-family: 'Varela Round';
+    color: #8d8d8d;
+    position: relative;
+    margin-top: 15px;
+}
+.no{
+    background-color: rgba(0, 0, 0, 0.925);
+    display: flex;
+    width: 70vw;
+    height: 650px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    margin-top: 30px;
+}
+.te{
+    color: white;
+    font-family: 'Goldman';
+    font-size: 40px;
+    margin-left: 30px;
+}
+.bello{
+    width: 40px;
+    height: 40px;
+}
+
+@media screen and (max-width: 800PX){
+    .no{
+        height: calc(59vw + 178px);
+    }
+    .te{
+        margin-left: 0px;
+        position: relative;
+        right: 5vw;
+        font-size: 5vw;
+    }
+    .bello{
+        position: relative;
+        bottom: 15vw;
+        width: 13vw;
+        height: 13vw;
+        left: 40%;
+    }
+}
+@media screen and (max-width: 625PX){
+    .myq{
+        font-size: calc(2vw + 6px)
+    }
+    .ans{
+        font-size: calc(2vw + 4px)
+    }
+    .date{
+        font-size: calc(1vw + 5px);
+        margin: 2px;
+    }
+    .pfp{
+        height: calc(2vw + 15px);
+        width: calc(2vw + 15px);
+        margin-right: 2px;
+    }
+    .user{
+        font-size: calc(1vw + 10px);
+    }
+    .title {
+        padding: calc(.3vw + 2px) calc(.4vw + 2px);
+        font-size: calc(1vw + 8px);
+    }
+}

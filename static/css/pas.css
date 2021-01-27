@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
+
+body{
+margin: 0;
+padding: 0;
+background-image: url(/static/bgs/nbg.png);
+background-size: 100%;
+background-attachment:fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+outline: none;
+}
+
+.box input[type = "email"], input[type = "password"]{
+border:0;
+background: none;
+display: block;
+margin: 10px auto;
+text-align: center;
+border: 2px solid #00ccff;
+padding: 10px 0px;
+width: 250px;
+outline: none;
+color: white;
+border-radius: 10px;
+transition: 0.25s;
+}
+.box input[type = "password"]:focus{
+    border-color: yellow;
+    width: 260px;
+}
+
+.box input[type = "email"]:focus{
+width: 260px;
+border-color: #fbff00;
+position: relative;
+}
+
+.box input[type = "submit"]{
+background: #00b9b9;
+display: block;
+margin: 20px auto;
+text-align: center;
+padding: 12px 40px;
+color: rgb(20, 0, 73);
+border-radius: 15px;
+transition: 0.2s;
+cursor: pointer;
+border: none;
+font-size: 20px;
+font-family: 'Lato', sans-serif;
+outline: none;
+margin-top: 50px;
+margin-bottom: -20px;
+}
+
+.box input[type = "submit"]:hover{
+background: none;
+border: 2px solid rgb(0, 243, 243);
+color: darkcyan;
+}
+.box{
+  width: 500px;
+  padding: 120px;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: #000000a6;
+  text-align: center;
+  border-radius: 10px;
+}
+p{
+  font-family: 'Varela Round';
+  margin-top: 20px;
+  font-size: 20px;
+  color: rgb(255, 19, 19);
+}
+.errorlist{
+    color: rgb(255, 81, 0);
+    margin: 11px 12px;
+    font-family: 'Varela Round';
+  }
+label{
+  color: #00fff3;
+  font-family: 'Varela Round';
+  font-size: 18px;
+}
+h1{
+    color: white;
+    font-family: 'Lato', sans-serif;
+    margin-bottom: 50px;
+
+}
+h2{
+  color: rgb(255, 255, 255);
+  font-family: 'Varela Round', sans-serif;
+  font-size: 30px;
+  position: relative;
+  margin-bottom: 50px;
+}
+.ok{
+  color: rgb(0, 183, 255);
+  font-family: 'Varela Round', sans-serif;
+  font-size: 30px;
+}
+.helptext{
+  display: none;
+}
+.inn{
+  color: rgb(22, 107, 1);
+  font-size: 25px;
+}
+.linksi{
+    color: rgb(0, 183, 255);
+    font-family: 'Varela Round', sans-serif;
+  }
+@media screen and (max-width: 530px){
+  .box{
+    position: fixed;
+  }
+}
+@media screen and (max-height: 670px){
+  .box{
+    top: 370px;
+}
+}

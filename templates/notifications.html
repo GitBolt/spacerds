@@ -1,0 +1,56 @@
+{% extends 'navbar.html' %}
+{% load static %}
+
+{% block body %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="{% static 'css/noti.css' %}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notifications - {{ request.user }} | Spacerds</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="he">
+      {% if not notifications.all %}
+      <div class="no">
+        <img class="bello" src="/static/bgs/bellw.png" alt="">
+        <h1 class="te">No Notifications Yet..</h1>
+      </div>
+      {% else %}
+      {% for notification in notifications %}
+      <div class="stuff">
+        <a class="title" href="{% url 'ndetail' notification.myquestion.pk %}">Answered</a>
+        <h1 class="date">{{ notification.created_at }}</h1>
+        <h1 class="myq">{{ notification.myquestion | safe }}</h1>
+        <hr>
+        <img class="pfp" src="{{ notification.created_by.profile.image.url }}" alt="">
+        <h1 class="user">{{ notification.created_by }}</h1>
+        <h1 class="ans">{{ notification.preview | safe | striptags | truncatechars:150}}</h1>
+      </div>
+      {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+
+
+</body>
+<script>
+  $(document).ready(function () {
+
+    $('.stuff').click(function () {
+      window.location = $(this).find('.title').attr("href");
+    });
+
+  });
+</script>
+</html>
+{% endblock body %}

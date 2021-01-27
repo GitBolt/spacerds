@@ -1,0 +1,50 @@
+{% extends 'navbar.html' %}
+{% load static %}
+
+{% block body2 %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% block style %}
+  <link rel="stylesheet" href="{% static 'css/qhome.css' %}">
+  {% endblock style %}
+  <title>Questions | Spacerds</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <h1>Question List</h1>
+
+  <div class="container">
+    <a class="askbutton" href="{% url 'qcreate' %}">Ask Question</a>
+    {% for questions in questions %}
+    <div class="main">
+      <small class="dateq">asked {{ questions.date_posted| timesince }} ago</small>
+      <img class="imageq" src="{{ questions.author.profile.image.url }}">
+      <a class="userq" href="{% url 'profile' questions.author %}">{{ questions.author }}</a>
+      <h2 class="titleq" href="{% url 'qdetail' questions.pk %}">{{ questions.title }}</h2>
+      <p class="mainq">{{ questions.content| truncatewords:60 |striptags| safe }}</p>
+    </div>
+    {% endfor %}
+  </div>
+
+</body>
+
+</html>
+<script>
+  $(document).ready(function () {
+
+    $('.main').click(function () {
+      window.location = $(this).find('.titleq').attr("href");
+    });
+
+  });
+</script>
+
+{% endblock body %}
+{% endblock body2 %}

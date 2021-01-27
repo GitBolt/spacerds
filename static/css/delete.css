@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-image: url(/static/bgs/nbg.png);
+    background-size: 100%;
+    background-attachment:fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+html, body{
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.items{
+    background-color: rgba(0, 0, 0, 0.815);
+    border-radius: 10px;
+    width: 1000px;
+    margin-top: 80px;
+    height: 500px;
+    text-align: center;
+}
+h1{
+    font-family: 'Varela Round';
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    margin: 20px 10px;
+}
+h2, h3, h4{
+    font-family: 'Ubuntu', sans-serif;
+    color: rgb(97, 97, 97);
+    font-size: 28px;
+    position: relative;
+    top: 80px;
+    margin: 30px;
+}
+small{
+    color: rgb(0, 119, 255);
+}
+.btn{
+    background-color: red;
+    outline: none;
+    border: 2px solid red;
+    padding:  10px 20px ;
+    font-size: 20px;
+    color: white;
+    transition: .3s;
+    position: relative;
+    margin-top: 150px;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.651);
+    color: red;
+    border: 2px solid red;
+}
+@media screen and (max-width: 1047px){
+    .items{
+        width: 90vw;
+    }
+    h1{
+        font-size: calc(2vw + 20px);
+    }
+    h2, h3, h4{
+        font-size: calc(2vw + 17px)
+    }
+
+}

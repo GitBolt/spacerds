@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.max-width{
+    max-width: 2000px;
+    margin: auto;
+    padding: 0 10px;   
+}
+.navbar{
+    position: fixed;
+    width: 100%;
+    padding: 15px 0;
+    background-color: #070035;
+    z-index: 10;
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .logo a{
+    color: white;
+    font-size: 35px;   
+    font-family: 'Goldman', cursive;
+}
+li a{
+    color: white;
+    font-size: 18px;
+    margin-left: 20px;
+    padding: 6px 30px;
+    border: 2px solid yellow;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;  
+    transition: .4s;
+}
+li a:hover{
+    background-color: rgba(161, 38, 0, 0.527);
+}
+.log{
+    margin-left: 75px;
+}
+.bell{
+    position: relative;
+    left: calc(36vw + 242px);
+    margin-left: 28px;
+    outline: none;
+    transition: .3s;
+}
+.bell:hover{
+    filter: drop-shadow( 0px 1px 12px rgba(255, 115, 0, 0.685));
+}
+.count{
+    background: rgb(255, 53, 53);
+    color: white;
+    padding: 0px 6px;
+    position: relative;
+    border-radius: 50%;
+    float: right;
+    right: 12px;
+    font-size: 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    z-index: 10;
+}
+@media screen and (max-width: 1600PX){
+    .bell{
+        left: calc(36vw + 257px);
+    }
+}
+@media screen and (max-width: 1047px){
+    .line{
+        width: 30px;
+        height: 3px;
+        background: #00ffff;
+        margin: 6px;
+    }
+    .hamburger{
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+    }   
+    .logo{
+        z-index: 2;
+        font-family: 'Goldman', cursive;        
+    }
+
+    .menu{
+        height: 200vh;
+        position: fixed;
+        background-color:  #070035ec;
+        flex-direction: column;
+        display: flex;
+        clip-path: circle(100px at 90%);
+        -webkit-clip-path: circle(100px at 93% 2%);
+        transition: all .7s ease-out;
+    }
+    .navbar .menu li a {
+        position: relative;
+        top: 98vh;
+        left: 48.9vh;
+        display: flex;
+        margin-top: 80px;
+        margin-right: 100vh;
+        padding: 10px 50px;
+        justify-content: space-evenly;
+    }
+    .menu.open{
+        clip-path: circle(100px at 90%);
+        -webkit-clip-path: circle(1000px at 80%);
+    }
+    .log{
+        margin-left: 20px;
+    }
+    .bell{
+        left: calc(11vw - 62px);
+    }
+}
+@media screen and (max-width: 660px){
+    .imageb{
+        width: calc(4vw +  15px);
+        position: relative;
+        top: 2px;
+    }
+}
+@media screen and (max-width: 450px){
+    .navbar .logo a{
+        font-size: calc(3vw + 15px);
+        margin-right: 50px;
+    }
+}
+@media screen and (max-width: 305px){
+    .line{
+        width: 25px;
+    }
+}
+
+@media screen and (max-height: 807px){
+    .navbar .menu li a{
+        top: 103vh;
+        margin-top: 60px;
+    }
+}
+@media screen and (max-height: 705px){
+    .navbar .menu li a{
+        top: 107vh;
+        margin-top: 45px;
+    }
+}
+@media screen and (max-height: 650px){
+    .navbar .menu li a{
+        top: 108vh;
+        margin-top: 38px;
+    }
+}
+@media screen and (max-height: 620px){
+    .navbar .menu li a{
+        margin-top: 30px;
+    }
+}
+
+

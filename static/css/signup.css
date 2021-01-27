@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
+
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(/static/bgs/login.jpg);
+    background-size: 100%;
+    background-attachment:fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    outline: none;
+  }
+
+  .box h1{
+    color: rgb(255, 255, 255);
+    font-family: 'Varela Round', sans-serif;
+    bottom: 40px;
+    font-size: 40px;
+    position: relative;
+  }
+  .box h2{
+    color: rgb(255, 255, 255);
+    font-family: 'Varela Round', sans-serif;
+    bottom: 40px;
+    font-size: 30px;
+    position: relative;
+  }
+
+
+  .box input[type = "text"],.box input[type = "email"],.box input[type = 'password']{
+    border:0;
+    background: none;
+    display: block;
+    margin: 25px auto;
+    text-align: center;
+    border: 2px solid #00ccff;
+    padding: 16px 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 28px;
+    transition: 0.25s;
+  }
+  .box input[type = "text"]:focus,.box input[type = "password"]:focus,.box input[type = 'email']:focus{
+    width: 260px;
+    border-color: #fbff00;
+    position: relative;
+  }
+  .box input[type = "submit"]{
+    background: #00b9b9;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    padding: 12px 40px;
+    color: rgb(20, 0, 73);
+    border-radius: 15px;
+    transition: 0.2s;
+    cursor: pointer;
+    border: none;
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    outline: none;
+
+  }
+  .box input[type = "submit"]:hover{
+    background: none;
+    border: 2px solid rgb(0, 243, 243);
+    color: darkcyan;
+  }
+
+.hm{
+  color: rgb(255, 255, 255);
+  font-family: 'Varela Round', sans-serif;
+}
+
+.linksi{
+  color: rgb(0, 183, 255);
+  font-family: 'Varela Round', sans-serif;
+}
+.box{
+  width: 500px;
+  padding: 120px;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background: #070707e7;
+  text-align: center;
+  border-radius: 10px;
+}
+p{
+  font-family: 'Varela Round';
+  margin-top: 20px;
+  font-size: 20px;
+  color: rgb(255, 19, 19);
+}
+
+label{
+  color: #00fff3;
+  font-family: 'Varela Round';
+  font-size: 20px;
+}
+.errorlist{
+  color: rgb(255, 81, 0);
+  margin: 11px 12px;
+  font-family: 'Varela Round';
+}
+@media screen and (max-width: 530px){
+  .box{
+    position: fixed;
+  }
+}
+@media screen and (max-height: 670px){
+  .box{
+    top: 370px;
+}
+}

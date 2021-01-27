@@ -1,0 +1,42 @@
+{% extends 'navbar.html' %}
+
+{% load static %}
+
+
+{% block body %}
+{% block body2 %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block style %}
+    {% block style2 %}
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+    {% endblock style2 %}
+    {% endblock style %}
+    <title>Sign Up | Spacerds</title>
+</head>
+
+<body>
+
+    <form class="box" method="post">
+        <h1>SIGNUP</h1>
+
+        {% csrf_token %}
+
+        {{form.username}}
+        {{form.email}}
+        {{form.password1}}
+        {{form.password2}}
+        {{form.errors}}
+        <input type="submit" name="" value="Submit">
+        <span class="hm">Already Have An Account? <a class="linksi" href="{% url 'logoutuser' %}">Login</a></span>
+    </form>
+
+</body>
+
+</html>
+{% endblock body2 %}
+{% endblock body %}

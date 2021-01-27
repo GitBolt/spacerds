@@ -1,0 +1,75 @@
+{% extends 'navbar.html' %}
+{% load static %}
+
+{% block body %}
+{% block body2 %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% block style2 %}
+  <link rel="stylesheet" href="{% static 'css/qdetail.css' %}">
+  {% endblock style2 %}
+  <title>{{ object.title }}</title>
+</head>
+
+<body>
+
+  <div class="everything">
+    <div class="q">
+      <small class="dateq">{{ object.date_posted|date:"F d, Y" }}</small>
+      <img class="imageq" src="{{ object.author.profile.image.url }}">
+      <a class="userq" href="/profile/{{ questions.author }}">{{ object.author }}</a>
+      <h2 class="titleq">{{ object.title }}</h2>
+      <small class="mainq">{{ object.content | safe}}</small>
+      <div class="btn">
+        {% if object.author == user %}
+        <a class="update" href="{% url 'qupdate' object.id %}">Update</a>
+        <a class="delete" href="{% url 'qdelete' object.id %}">Delete</a>
+        {% endif %}
+      </div>
+    </div>
+    <hr>
+    <div class="ans" id="answer">
+      <h4 class="anstitle">Answers</h4>
+      {% if not questions.answers.all %}
+      <div class="info">
+        <div class="ok">No Answers Yet.</div> <br>
+        {% if user.is_authenticated %}
+        <a class="ansbtn" href="{% url 'ans' questions.pk %}">Add Answer</a>
+        {% else %}
+        <a class="ansbtn" href="{% url 'loginuser' %}">Login To Answer</a>
+      </div>
+
+      {% endif %}
+
+      {% else %}
+
+      {% for answers in questions.answers.all %}
+
+      <p class="datea">{{ answers.date_added }}</p>
+      <img class="imagea" src="{{ object.author.profile.image.url }}">
+      <a class="usera" href="/profile/{{ answers.owner }}">{{ answers.owner }}</a>
+      <h3 class="maina">{{ answers.body | safe }}</h3>
+      {% if answers.owner == user %}
+      <a class="deletee" href="{% url 'adelete' answers.id %}">Delete</a>
+      {% endif %}
+
+      <hr>
+      <br>
+      <br>
+      <br>
+      <br>
+      {% endfor %}
+      <a class="ansa" href="{% url 'ans' object.pk %}">Add Your Answer</a>
+      {% endif %}
+    </div>
+  </div>
+
+</body>
+
+</html>
+{% endblock body2 %}
+{% endblock body %}

@@ -1,0 +1,32 @@
+{% extends 'navbar.html' %}
+{% load static %}
+
+{% block body %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/ask.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask Question | Spacerds</title>
+</head>
+
+<body>
+    <div class="ask">
+        <div class="stuff">
+            <h1>Add Answer</h1>
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.media }}
+                {{ form }}
+                <button class="btn" type="submit">Answer</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
+{% endblock body %}

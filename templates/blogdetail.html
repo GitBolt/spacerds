@@ -1,0 +1,34 @@
+{% extends 'navbar.html' %}
+{% load static %}
+
+{% block body %}
+{% block body2 %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block style2 %}
+    <link rel="stylesheet" href="{% static 'css/bdetail.css' %}">
+    {% endblock style2 %}
+    <title>{{ blog.heading }}</title>
+</head>
+
+<body>
+
+    <div class="everything">
+        <img class="img" src="{{ blog.bg.url }}">
+        <small class="dateq">{{ blog.date|date:"F d, Y" }}</small>
+        <div class="blogmain">
+            <h2 class="titleq">{{ blog.heading }}</h2>
+            <small class="mainq">{{ blog.main | safe}}</small>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
+{% endblock body2 %}
+{% endblock body %}

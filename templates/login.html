@@ -1,0 +1,36 @@
+{% extends 'navbar.html' %}
+{% load static %}
+
+{% block body2 %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block style2 %}
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+    {% endblock style2 %}
+    <title>Login | Spacerds</title>
+</head>
+
+<body>
+
+
+    <form class="box" method="post">
+        <h1>LOGIN</h1>
+
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="Username">
+        <input type="password" name="password" placeholder="Password">
+        <input type="submit" name="" value="Login">
+        <span class="hm">Forgot Password? <a class="linksi" href="{% url 'reset_password' %}">Reset</a></span>
+        {% for message in messages %}
+        <p>{{message}}</p>
+        {% endfor %}
+    </form>
+
+</body>
+
+</html>
+{% endblock body2 %}

@@ -1,0 +1,37 @@
+{% extends 'navbar.html' %}
+{% load static %}
+
+{% block body2 %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% block style %}
+  <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+  {% endblock style %}
+  <title>Blogs | Spacerds</title>
+</head>
+
+<body>
+  <h1>Blogs</h1>
+
+  <div class="container">
+    {% for blog in blog %}
+    <div class="main">
+      <a class="btn" href="{% url 'bdetail' blog.id %}">Read More</a>
+      <img class="image" src="{{ blog.dummy.url }}">
+      <h2 class="title">{{ blog.heading }}</h2>
+      <p class="intro">{{ blog.main| truncatewords:15 |striptags| safe }}</p>
+    </div>
+    {% endfor %}
+  </div>
+
+</body>
+
+</html>
+
+{% endblock body %}
+{% endblock body2 %}

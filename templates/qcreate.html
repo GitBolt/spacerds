@@ -1,0 +1,35 @@
+{% extends 'navbar.html' %}
+{% load static %}
+
+{% block body %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/qcreate.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask Question | Spacerds</title>
+</head>
+
+<body>
+    <div class="ask">
+        <div class="stuff">
+            <h1>Ask Question</h1>
+            <h3>You are asking a public question, make sure the question is related to space or/and rocket science,
+                Questions can be as easy as number of planets in our solar system to complex rocket equations.</h3>
+            <form method="POST">
+                {% csrf_token %}
+    
+                {{ form.media }}
+                {{ form }}
+                <button class="btn" type="submit">Post</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
+{% endblock body %}

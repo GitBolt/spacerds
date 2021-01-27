@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+body{
+    background-color: rgb(235, 233, 233);
+}
+
+.everything{
+    align-items: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.blogmain{
+    margin-top: 40px;
+    width: 900px;
+    padding-inline: 20px 20px
+}
+
+.titleq{
+    text-align: center;
+    font-family: 'Electrolize', sans-serif;
+    margin-bottom: 50px;
+    color: rgb(0 0 0);
+    font-size: 50px;
+}
+.dateq{
+    font-family: 'Roboto';
+    color: #444444;
+    font-size: 17px;
+    position: relative;
+    margin: 9px;
+}
+.mainq{
+    font-size: 22px;
+    font-family: 'Ubuntu', sans-serif;
+    word-spacing: 2px;
+}
+.img{
+    width: 100%;
+    height: 400px;
+    
+}
+hr{
+    margin-bottom: 20px;
+}
+@media screen and (max-width: 950px){
+    .blogmain{
+        width: 90%;
+    }
+}
+img{
+    width: 100% !important;
+}
+
+@media screen and (max-width: 700px){
+    .titleq{
+        font-size: 40px;
+    }
+    .mainq{
+        font-size: 20px;
+    }
+}

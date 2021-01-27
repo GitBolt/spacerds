@@ -1,0 +1,76 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+body{
+    background-image: url(/static/bgs/ask.png);
+    background-size: 100%;
+    background-attachment:fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+html, body{
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}  
+form{
+    position: relative;
+    margin-top: 20vh;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-align: center;
+}
+h1{
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+    top: 150px;
+    font-size: 40px;
+    color: white;
+}
+
+
+.stuff{
+    text-align: center;
+    width: 100%;
+}
+.btn{
+    background: #007773;
+    outline: none;
+    font-family: 'Open Sans';
+    font-size: 25px;
+    position: relative;
+    border-radius: 10px;
+    top: 25px;
+    border: none;
+    color: #dffaff;
+    transition: .2s;
+    padding: 10px 25px;
+    margin-bottom: 50;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: rgb(1, 192, 192);
+
+}
+
+label{
+display: none;
+}
+
+#cke_id_body{
+    width: 1000px !important;
+    margin-top: 50px;
+}
+#id_date_added{
+    display: none !important;
+}
+
+
+@media screen and (max-width: 1050px){
+
+    #cke_id_body{
+    width: 96vw !important;
+}
+}
